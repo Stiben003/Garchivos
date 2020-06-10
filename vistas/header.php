@@ -7,6 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="../librerias/fontawesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="../librerias/datatable/dataTables.bootstrap4.min.css">
 </head>
 
 <body>
@@ -27,7 +28,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="gestor.php"><span class="fas fa-book-reader"></span> Administrar</a>
+                        <a class="nav-link" href="datagestor.php"><span class="fas fa-book-reader"></span> Administrar</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#"> <span class="fas fa-file"></span> Reportes</a>
