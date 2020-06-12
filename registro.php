@@ -12,17 +12,17 @@
             <div class="row">
                 <div class="col-sm-4"></div>
                 <div class="col-sm-4">
-                    <form>
+                    <form id="frmRegistro" method="post" onsubmit="return agregarUsuarioNuevo()" >
                         <label>Nombre</label>
-                        <input type="text" name="nombre" id="nombre" class="form-control">
+                        <input type="text" name="nombre" id="nombre" class="form-control" required="" >
                         <label>Fecha Nacimiento</label>
-                        <input type="text" name="fechaNacimiento" id="fechaNacimiento" class="form-control">
+                        <input type="text" name="fechaNacimiento" id="fechaNacimiento" class="form-control" required="">
                         <label>Correo Electronico</label>
-                        <input type="text" name="correo" id="correo" class="form-control">
+                        <input type="text" name="correo" id="correo" class="form-control" required="">
                         <label>Nombre de Usuario</label>
-                        <input type="text" name="usuario" id="usuario" class="form-control">
+                        <input type="text" name="usuario" id="usuario" class="form-control" required="">
                         <label>Password</label>
-                        <input type="password" name="password" id="password" class="form-control">
+                        <input type="password" name="password" id="password" class="form-control" required="">
                         <br>
                         <div class="row">
                             <div class="col-sm-6 text-left">
@@ -38,5 +38,24 @@
             </div>
         </div>
     <script src="librerias/sweetalert.min.js"></script>
-    </body>
+    <script src="librerias/jquery.slim.min.js"></script>
+    <script type="text/javascript">
+        function agregarUsuarioNuevo(){
+            $.ajax({
+                method:"POST",
+                data: $('#frmRegistro').serialize(),
+                url: "procesos/usuario/registro/agregarUsuario.php",
+                success:function(respuesta){
+                    respuesta = respuesta.trim();
+                    if(respuesta == 1){
+                        swal(":D", "Agregado con exito!", "Success");
+                    }else{
+                        swal(":(", " Fallo al agregar usuario !", "Error");
+                    }
+                }
+            });
+            return false;
+        }
+    </script>
+</body>
 </html>
