@@ -37,9 +37,8 @@
                 <div class="col-sm-4"></div>
             </div>
         </div>
-    <script src="librerias/jquery.slim.min.js"></script>
     <script src="librerias/sweetalert.min.js"></script>
-
+    <script src="librerias/jquery.slim.min.js"></script>
     <script type="text/javascript">
         function agregarUsuarioNuevo(){
             $.ajax({
@@ -47,7 +46,12 @@
                 data: $('#frmRegistro').serialize(),
                 url: "procesos/usuario/registro/agregarUsuario.php",
                 success:function(respuesta){
-                    alert(respuesta);
+                    respuesta = respuesta.trim();
+                    if(respuesta == 1){
+                        swal(":D", "Agregado con exito!", "Success");
+                    }else{
+                        swal(":(", " Fallo al agregar usuario !", "Error");
+                    }
                 }
             });
             return false;
