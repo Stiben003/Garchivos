@@ -3,9 +3,10 @@
 
 <head>
     <title>Gestor</title>
-    <link rel="stylesheet" type="text/css" href="../librerias/bootstrap4/bootstrap.min.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="../librerias/bootstrap4/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../librerias/fontawesome/css/all.css">
 </head>
 
 <body>
@@ -21,18 +22,18 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home
+                        <a class="nav-link" href="inicio.php"> <span class="fas fa-home"></span> Inicio
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="gestor.php"> <span class="far fa-file-alt"></span> Administrar</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Services</a>
+                        <a class="nav-link" href="#">Reportes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="#"><span class="fas fa-sign-out-alt"></span> Salir</a>
                     </li>
                 </ul>
             </div>
